@@ -15,6 +15,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { scrollToTop } from "../../constants/scrollToTop";
 import { partnerBrands } from "../../constants/partnerBrands";
 import { useToast } from "@chakra-ui/react";
+import Showcase2Card from "../showcase2-components/showcase2Card";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -243,7 +244,7 @@ const HomePage = () => {
             </div>
           </motion.div>
         </div>
-        <div style={{ maxWidth: 1200 }} className="p-10 max-md:px-5 mx-auto">
+        {/* <div style={{ maxWidth: 1200 }} className="p-10 max-md:px-5 mx-auto">
           <motion.h2
             initial="initial"
             whileInView="animate"
@@ -315,7 +316,91 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+
+
+<div style={{ maxWidth: 1200 }} className="p-10 max-md:px-5 mx-auto">
+  <motion.h2
+    initial="initial"
+    whileInView="animate"
+    variants={animationVariants.fadeIn}
+    viewport={{ once: true, amount: 0.2 }}
+    className="text-5xl max-md:text-4xl font-semibold text-center"
+  >
+    Exclusive Carpets
+  </motion.h2>
+
+  <div className="flex flex-col gap-5 mt-10 max-sm:mt-8">
+
+    <div className="flex gap-5 max-lg:flex-col">
+      <div className="w-2/4 max-lg:w-full">
+        <Showcase2Card
+          id={rentHouses[0].id}
+          src={rentHouses[0].mainImage}
+          images={rentHouses[0].moreImages}
+          title={rentHouses[0].name}
+          description={rentHouses[0].description}
+          price={rentHouses[0].price}
+        />
+      </div>
+
+      <div className="w-2/4 gap-5 flex max-lg:w-full max-sm:flex-col">
+        <Showcase2Card
+          id={rentHouses[1].id}
+          src={rentHouses[1].mainImage}
+          images={rentHouses[1].moreImages}
+          title={rentHouses[1].name}
+          description={rentHouses[1].description}
+          price={rentHouses[1].price}
+        />
+
+        <Showcase2Card
+          id={rentHouses[2].id}
+          src={rentHouses[2].mainImage}
+          images={rentHouses[2].moreImages}
+          title={rentHouses[2].name}
+          description={rentHouses[2].description}
+          price={rentHouses[2].price}
+        />
+      </div>
+    </div>
+
+    <div className="flex gap-5 max-lg:flex-col">
+      <div className="w-2/4 gap-5 flex max-lg:w-full max-sm:flex-col">
+        <Showcase2Card
+          id={rentHouses[3].id}
+          src={rentHouses[3].mainImage}
+          images={rentHouses[3].moreImages}
+          title={rentHouses[3].name}
+          description={rentHouses[3].description}
+          price={rentHouses[3].price}
+        />
+
+        <Showcase2Card
+          id={rentHouses[4].id}
+          src={rentHouses[4].mainImage}
+          images={rentHouses[4].moreImages}
+          title={rentHouses[4].name}
+          description={rentHouses[4].description}
+          price={rentHouses[4].price}
+        />
+      </div>
+
+      <div className="w-2/4 max-lg:w-full">
+        <Showcase2Card
+          id={rentHouses[5].id}
+          src={rentHouses[5].mainImage}
+          images={rentHouses[5].moreImages}
+          title={rentHouses[5].name}
+          description={rentHouses[5].description}
+          price={rentHouses[5].price}
+        />
+      </div>
+    </div>
+
+  </div>
+</div>
+
       </div>
       {/* what we do section end */}
 
